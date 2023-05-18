@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRICsters Studio</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <style>
+      video {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+      }
+  </style>
+</head>
+<body>
+    <video autoplay loop muted plays-inline class ="back-video">
+
+      <source src ="assets\pexels-cottonbro-studio-5657835-4096x2160-50fps.mp4" type="video/mp4">
+   </video>
+   
+    <div class="header">
+        <nav>
+          <a href="index.html"><img src="" alt="TRICsters Studio"></a>
+          <div class="nav-links">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">SERVICES</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#studio">Studio Rentals</a></li>
+                  <li><a href="#music-studio">Recording Sessions</a></li>
+                  <li><a href="#music-studio">Music Production</a></li>
+                  <li><a href="#music-studio">Mix and Mastering</a></li>
+                  <li><a href="#music-studio">Songwriting</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">CLASSES</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#music-class">Music</a></li>
+                  <li><a href="#business">Business</a></li>
+                  <li><a href="#bootcamp">Bootcamp Classes</a></li>
+                </ul>
+              </li>              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">STUDIO</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#music-studio">Music Studio</a></li>
+                  <li><a href="#podcast-studio">Podcast Studio</a></li>
+                  <li><a href="#dance-studio">Dance Studio</a></li>
+                </ul>
+              </li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+
+    <div class="wrapper">
+        <div class="cols cols0">
+            <h1>At TRICster Studios, <br> we <span class="multiText">provide recording sessions</span></h1>
+        </div>
+        <div class="cols cols1"></div>
+    
+        <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+        <script>
+            var typingEffect = new Typed(".multiText",{
+              strings : ["provide recording sessions", "provide studio rentals", "train passionate musicians", "build successful careers"],
+              loop: true,
+              typeSpeed: 100,
+              backSpeed: 80,
+              backDelay: 1500,
+              preStringTyped: function(pos, self) {
+                if (pos === 0) {
+                  self.cursor.remove();
+                  self.el.innerHTML = 'We <span class="multiText"></span>';
+                }
+              },
+            })
+          </script>          
+    </div>   
+
+  <!-- Page content goes here -->
+<div class="#studio">
+  <!-- Your content for the page -->
+  <h2>Studios</h2>
+  <p>This is the content of your page.</p>
+  <!-- Add more content as needed -->
+</div>
+    <script src=assets\dropdown_menu.js></script>
+</body>
+</html>

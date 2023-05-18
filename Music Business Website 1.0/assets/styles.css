@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(27, 48, 236, 0.322));
+    position: relative;
+}
+
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+  }
+    @media (min-aspect-ratio: 16/9){
+        .back-video{
+            width: auto;
+            height: 100%;
+        }
+    }
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("assets\pexels-cottonbro-studio-5657835-4096x2160-50fps.mp4") no-repeat;
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity as desired */
+}
+
+
+.header .nav-links ul li ul {
+    display: none;
+}
+  
+.header .nav-links ul li:hover > ul {
+    display: block;
+}
+  
+.header .nav-links ul li ul li {
+    display: block;
+    background-color: #f2f2f2;
+}
+  
+.header .nav-links ul li ul li a {
+    display: block;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+}
+  
+.header .nav-links ul li ul li a:hover {
+    background-color: #ddd;
+}
+  
+.header .nav-links ul li a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+}
+  
+.header .nav-links ul li a:hover {
+    background-color: #333;
+}
+  
+.header .nav-links ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 999;
+}
+  
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;    
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Passion One', cursive;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    display: none;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  /* Show the dropdown menu when the user clicks on the dropdown toggle */
+  .dropdown-toggle:focus + .dropdown-menu,
+  .dropdown-menu:focus {
+    display: block;
+  }
+  
+  /* Style the dropdown toggle */
+  .dropdown-toggle {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown menu items */
+  .dropdown-menu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f7f7f7;
+  }
+  
+  /* Style the active dropdown menu item */
+  .dropdown-menu li.active a {
+    background-color: #f7f7f7;
+  }
+  
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    font-family: 'Passion One', cursive;
+}
+
+
+.cols {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cols0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    color: white; /* or any other color value */
+}
+
+.topline {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #444;
+}  
+
+.topline::after{
+    position: absolute;
+}
